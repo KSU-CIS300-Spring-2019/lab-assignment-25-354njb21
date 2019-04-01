@@ -17,7 +17,7 @@ namespace Ksu.Cis300.PriorityQueueLibrary
     /// An immutable binary tree node that can draw itself.
     /// </summary>
     /// <typeparam name="T">The type of the elements in the tree.</typeparam>
-    public partial class BinaryTreeNode<T> : ITree
+    public partial class LeftistTree<T> : ITree
     {
         /// <summary>
         /// Gets the children of this node.
@@ -33,6 +33,8 @@ namespace Ksu.Cis300.PriorityQueueLibrary
             }
         }
 
+       
+
         /// <summary>
         /// Gets whether this node is empty. Because empty trees will be represented by
         /// null, it always returns false.
@@ -43,5 +45,10 @@ namespace Ksu.Cis300.PriorityQueueLibrary
         /// Gets the object to be drawn as the contents of this node.
         /// </summary>
         object ITree.Root => Data;
+
+
+        
+        
+
     }
 }
