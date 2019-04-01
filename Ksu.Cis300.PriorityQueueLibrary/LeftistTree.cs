@@ -15,6 +15,9 @@ namespace Ksu.Cis300.PriorityQueueLibrary
     /// <typeparam name="T">The type of the elements stored in the tree.</typeparam>
     public partial class LeftistTree<T> : ITree
     {
+        /// <summary>
+        /// Keeps track of path length
+        /// </summary>
         private int _pathLength;
         /// <summary>
         /// Gets the data stored in this node.
@@ -56,6 +59,11 @@ namespace Ksu.Cis300.PriorityQueueLibrary
             _pathLength = NullPathLength(RightChild) + 1;
         }
 
+        /// <summary>
+        /// Checks the path length of the leftist tree
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns>The null path length of the leftist tree</returns>
         public static int NullPathLength(LeftistTree<T> t)
         {
             if (t == null)

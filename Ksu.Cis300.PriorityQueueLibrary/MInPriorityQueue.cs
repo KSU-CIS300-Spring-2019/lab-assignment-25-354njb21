@@ -73,7 +73,7 @@ namespace Ksu.Cis300.PriorityQueueLibrary
                 }
                 else
                 {
-                    tree = new LeftistTree<KeyValuePair<TPriority, TValue>>(h2.Data, h2.LeftChild, Merge(h2.RightChild, h2));
+                    tree = new LeftistTree<KeyValuePair<TPriority, TValue>>(h2.Data, h2.LeftChild, Merge(h2.RightChild, h1));
                     return tree;
                 }
             }
@@ -81,6 +81,11 @@ namespace Ksu.Cis300.PriorityQueueLibrary
             
         }
 
+
+        /// <summary>
+        /// Removes the minimum priority and constructs the new tree
+        /// </summary>
+        /// <returns>The new TValue after removal of the root</returns>
         public TValue RemoveMinimumPriority()
         {
             if (_elements == null)
